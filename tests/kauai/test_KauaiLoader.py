@@ -10,3 +10,8 @@ class KauaiLoaderTest(unittest.TestCase):
     sys.modules['foo'] = 'bar'
     loader = KauaiLoader()
     assert loader.load_module('foo') == 'bar'
+
+  @test
+  def shouldAbortLoadIfModuleDoesNotExistInStore(self):
+    loader = KauaiLoader()
+    assert loader.load_module('foo') == None
