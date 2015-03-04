@@ -17,7 +17,7 @@ class KauaiLoader(object):
         if len(out) == 0:
           return None
 
-	exec out.content in mod.__dict__
+	exec out[0].content in mod.__dict__
 
         sys.modules[name] = mod
         return mod
