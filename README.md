@@ -11,7 +11,7 @@ cqlsh> insert into kauai.functions (uuid, content) VALUES ('some_uuid', 'def gre
 
 Then in a python interpreter
 
-```
+```python
 from kauai import load
 load()
 
